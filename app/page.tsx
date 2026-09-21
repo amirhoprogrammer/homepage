@@ -1,11 +1,10 @@
 import Image from "next/image";
+import Hero from "./Hero/Hero";
 
 export default function Home() {
   return (
     <div className="flex justify-center text-center items-center">
-      <p>doifjfde</p>
-      <p>lfnvopdfj</p>
-      <p>lfnvopdfj</p>
+      <Hero />
     </div>
   );
 }
