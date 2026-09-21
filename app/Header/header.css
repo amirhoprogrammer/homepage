@@ -1,0 +1,21 @@
+@media (max-width: 600px) {
+  .headerlist {
+    flex-wrap: wrap;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (max-width: 500px) {
+  .headerlist {
+    flex-wrap: wrap;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .headerlisting {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .headerlist {
+    flex-wrap: wrap;
+  }
+}
