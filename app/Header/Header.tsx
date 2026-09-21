@@ -29,7 +29,7 @@ export default function Header() {
       <div className="logo rounded-full">
         <Link href="./">
           <Image
-            src="/Logo.jpg"
+            src="/logo.jpg"
             alt="AmirLogo"
             width={50}
             height={50}

@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Hero from "./Hero/Hero";
+import Aboutme from "./Aboutme/page";
 
 export default function Home() {
   return (
-    <div className="flex justify-center text-center items-center">
+    <div className="">
       <Hero />
+      <Aboutme />
     </div>
   );
 }
