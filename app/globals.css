@@ -6,6 +6,7 @@
 }
 @theme {
   --color-button: #3561c3;
+  --color-cards: #6861bf;
 }
 
 @theme inline {
