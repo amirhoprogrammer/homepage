@@ -4,3 +4,7 @@ export interface Card {
   title: string;
   description: string;
 }
+export interface FooterItems {
+  title: string;
+  listItems: string[];
+}
