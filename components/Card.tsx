@@ -1,7 +1,7 @@
 import React from "react";
-import { Card } from "@/utils/type";
+import { Carditem } from "@/utils/type";
 import Image from "next/image";
-export default function Card({ items }: { items: Card }) {
+export default function Card({ items }: { items: Carditem }) {
   return (
     //<div className="rounded-lg bg-cards w-[30%] flex-col">
     //  <div className="relative w-full h-64 rounded-t-lg overflow-hidden">

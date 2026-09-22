@@ -1,4 +1,4 @@
-export interface Card {
+export interface Carditem {
   alt: string;
   imageUrl: string;
   title: string;
