@@ -5,15 +5,20 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import "./header.css";
 import LanguageSelector from "@/components/languageSelector";
-const HeaderItem = [
-  { headerData: "محصولات", headerLink: "#" },
-  { headerData: "دسته بندی", headerLink: "#" },
-  { headerData: "تماس با ما", headerLink: "#" },
-  { headerData: "تماس با ما", headerLink: "#" },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
+import { dictionary } from "@/data/dictionary";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { lang } = useLanguage();
+  const t = dictionary[lang];
+
+  const HeaderItem = [
+    { headerData: t.nav.products, headerLink: "#" },
+    { headerData: t.nav.categories, headerLink: "#" },
+    { headerData: t.nav.about, headerLink: "#" },
+    { headerData: t.nav.contact, headerLink: "#" },
+  ];
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 580);
     onScroll();

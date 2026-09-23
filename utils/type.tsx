@@ -1,12 +1,16 @@
 export interface Carditem {
   alt: string;
   imageUrl: string;
-  title: string;
-  description: string;
+  title_fa: string;
+  title_en: string;
+  description_fa: string;
+  description_en: string;
 }
 export interface FooterItems {
-  title: string;
-  listItems: string[];
+  title_fa: string;
+  title_en: string;
+  listItems_fa: string[];
+  listItems_en: string[];
 }
 
 export interface productsDetail {
