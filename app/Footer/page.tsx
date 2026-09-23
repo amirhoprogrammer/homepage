@@ -6,6 +6,7 @@ import { FooterLists } from "@/data/FooterLists";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { dictionary } from "@/data/dictionary";
 import Image from "next/image";
+import "./footer.css";
 
 const imageUrls = [
   "/icons8-github-100.png",
@@ -19,7 +20,7 @@ export default function Footer() {
 
   return (
     <div className="pt-5">
-      <div className="flex items-center px-2 py-2">
+      <div className="flex items-center px-2 py-2 footerside">
         <FooterMap />
         <FooterList items={FooterLists[0]} />
         <FooterList items={FooterLists[1]} />

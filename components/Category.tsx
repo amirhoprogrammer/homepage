@@ -5,6 +5,7 @@ import { getCategories } from "@/services/category";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { dictionary } from "@/data/dictionary";
 import { category } from "@/utils/type";
+import "../app/Categories/category.css";
 
 export default function Category() {
   const { lang } = useLanguage();
@@ -26,7 +27,7 @@ export default function Category() {
   }
 
   return (
-    <div className="flex gap-4 items-center justify-center">
+    <div className="flex gap-4 items-center justify-center categories">
       {categories.map((cat) => (
         <div
           className="rounded-2xl bg-categories p-2 w-40 flex items-center justify-center"

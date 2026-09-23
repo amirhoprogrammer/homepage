@@ -1,0 +1,5 @@
+@media (max-width: 750px) {
+  .footerside {
+    flex-wrap: wrap;
+  }
+}
