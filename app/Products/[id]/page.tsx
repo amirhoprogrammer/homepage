@@ -65,31 +65,6 @@ export default function ProductDetail() {
     lang === "fa" ? product.description_fa : product.description_en;
 
   return (
-    //<div className="max-w-4xl mx-auto px-4 py-10">
-    //  <button
-    //    onClick={() => router.back()}
-    //    className="mb-6 text-sm text-gray-500 hover:text-gray-800"
-    //  >
-    //    {lang === "fa" ? "← بازگشت" : "← Back"}
-    //  </button>
-
-    //  <div className="flex flex-col md:flex-row gap-8">
-    //    {/*<div className="relative w-full md:w-1/2 h-80 rounded-lg overflow-hidden">
-    //      <Image
-    //        src={product.image}
-    //        alt={title}
-    //        fill
-    //        className="object-cover"
-    //        sizes="(max-width: 768px) 100vw, 50vw"
-    //      />
-    //    </div>*/}
-
-    //    <div className="flex-1">
-    //      <h1 className="text-3xl font-bold mb-4 text-end">{title}</h1>
-    //      <p className="text-base leading-relaxed text-end">{description}</p>
-    //    </div>
-    //  </div>
-    //</div>
     <div className="flex gap-4 items-center justify-center w-[75%] h-[75%] px-15 py-20">
       <button
         onClick={() => router.back()}

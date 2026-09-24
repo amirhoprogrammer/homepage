@@ -12,7 +12,6 @@ export default function Product() {
   const { lang } = useLanguage();
   const t = dictionary[lang];
   const [products, setProducts] = useState<productsDetail[] | null>(null);
-  const [id, setId] = useState(0);
   useEffect(() => {
     getProducts()
       .then((data) => setProducts(Array.isArray(data) ? data : []))
