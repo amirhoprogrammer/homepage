@@ -6,12 +6,13 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { dictionary } from "@/data/dictionary";
 import { productsDetail } from "@/utils/type";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Product() {
   const { lang } = useLanguage();
   const t = dictionary[lang];
   const [products, setProducts] = useState<productsDetail[] | null>(null);
-
+  const [id, setId] = useState(0);
   useEffect(() => {
     getProducts()
       .then((data) => setProducts(Array.isArray(data) ? data : []))
@@ -31,31 +32,33 @@ export default function Product() {
       {products.map((product, id) => (
         <div
           key={id}
-          className="rounded-lg bg-products w-full h-full flex flex-col overflow-hidden gap-5"
+          className="rounded-lg bg-products w-full h-full flex flex-col overflow-hidden gap-5 bg-cards"
         >
-          <div className="relative w-full h-26 shrink-0 overflow-hidden">
-            <Image
+          <div className="relative w-full h-26 shrink-0 overflow-hidden ">
+            {/*<Image
               src={product.image}
               alt={lang === "fa" ? product.name_fa : product.name_en}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 33vw"
-            />
+            />*/}
           </div>
 
           <div className="flex flex-col flex-1 p-4">
-            <h3 className="text-2xl font-bold text-end mb-2 text-foreground">
+            <h3 className="text-2xl font-bold mb-2 text-foreground">
               {lang === "fa" ? product.name_fa : product.name_en}
             </h3>
 
             <p className="text-sm text-foreground flex-1 mb-4 bg-cards">
               {lang === "fa" ? product.description_fa : product.description_en}
             </p>
-
             <div className="flex justify-center mt-auto">
-              <button className="rounded-lg bg-button px-4 py-2 text-sm w-full max-w-25">
+              <Link
+                href={`/Products/${id + 1}`}
+                className="rounded-lg bg-button px-4 py-2 text-sm w-full max-w-30"
+              >
                 {t.card.moreInfo}
-              </button>
+              </Link>
             </div>
           </div>
         </div>
