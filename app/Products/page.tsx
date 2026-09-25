@@ -1,7 +1,7 @@
 import Product from "@/components/Product";
 export default function Products() {
   return (
-    <div>
+    <div className="p-2">
       <Product />
     </div>
   );

@@ -33,16 +33,21 @@ export default function Product() {
           key={id}
           className="rounded-lg bg-products w-full h-full flex flex-col overflow-hidden gap-5 bg-cards"
         >
-          <div className="relative w-full h-26 shrink-0 overflow-hidden ">
-            {/*<Image
-              src={product.image}
-              alt={lang === "fa" ? product.name_fa : product.name_en}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 33vw"
-            />*/}
+          <div className="relative w-full h-50 shrink-0 rounded-lg overflow-hidden bg-gray-200">
+            {product.image ? (
+              <Image
+                src={product.image}
+                alt={product.name_en}
+                fill
+                className="object-center"
+                sizes="64px"
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center text-xs text-gray-400">
+                بدون عکس
+              </div>
+            )}
           </div>
-
           <div className="flex flex-col flex-1 p-4">
             <h3 className="text-2xl font-bold mb-2 text-foreground">
               {lang === "fa" ? product.name_fa : product.name_en}
