@@ -40,7 +40,7 @@ export default function Product() {
                 alt={product.name_en}
                 fill
                 className="object-center"
-                sizes="64px"
+                sizes="100px"
               />
             ) : (
               <div className="w-full h-full flex items-center justify-center text-xs text-gray-400">
