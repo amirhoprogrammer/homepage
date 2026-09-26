@@ -5,7 +5,7 @@ import "./blogs.css";
 
 export default function Blogs() {
   return (
-    <div className="flex gap-4 items-center justify-center my-10 px-5 Cards">
+    <div className="flex gap-4 items-center justify-center my-10 px-5 Cards py-15">
       <Card items={Cards[0]} />
       <Card items={Cards[1]} />
       <Card items={Cards[2]} />

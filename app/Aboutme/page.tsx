@@ -9,7 +9,7 @@ export default function Aboutme() {
   const { lang } = useLanguage();
   const t = dictionary[lang].aboutMe;
   return (
-    <div className="px-3 py-3 my-5">
+    <div className="px-8 py-5 my-5">
       <div className="flex ">
         <h2 className="text-3xl font-bold">{t.title}</h2>
       </div>
