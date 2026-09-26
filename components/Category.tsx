@@ -21,7 +21,7 @@ export default function Category() {
       });
   }, []);
 
-  if (categories === null) return null; // یا یه اسکلتون لودینگ
+  if (categories === null) return null;
   if (categories.length === 0) {
     return <div className="text-red-500">{t.common.errorCategories}</div>;
   }

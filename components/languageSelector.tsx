@@ -5,7 +5,6 @@ import { useState } from "react";
 
 export default function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false);
-  //const [selectedLang, setSelectedLang] = useState("english");
   const { lang, setLang } = useLanguage();
 
   return (

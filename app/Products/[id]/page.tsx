@@ -28,7 +28,6 @@ export default function ProductDetail() {
 
     getProduct(id)
       .then((data) => {
-        // بسته به این‌که API آرایه برمی‌گردونه یا یه آبجکت تنها:
         const result = Array.isArray(data) ? data[0] : data;
         if (!result) {
           setNotFound(true);

@@ -16,9 +16,9 @@ function useItemsPerPage() {
   useEffect(() => {
     const calc = () => {
       const w = window.innerWidth;
-      if (w < 640) setItemsPerPage(1); // موبایل
-      else if (w < 1024) setItemsPerPage(2); // تبلت
-      else setItemsPerPage(4); // دسکتاپ
+      if (w < 640) setItemsPerPage(1);
+      else if (w < 1024) setItemsPerPage(2);
+      else setItemsPerPage(4);
     };
 
     calc();
@@ -45,7 +45,6 @@ export default function Product() {
       });
   }, []);
 
-  // اگه صفحه عوض بشه (مثلاً از دسکتاپ به موبایل) و صفحه‌ی فعلی دیگه معتبر نباشه، برگرد به صفحه‌ی اول
   useEffect(() => {
     setPage(0);
   }, [itemsPerPage]);
